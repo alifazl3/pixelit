@@ -1,0 +1,36 @@
+:root {
+  --font-sans: var(--font-geist-sans), Inter, ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), "SFMono-Regular", Consolas, monospace;
+
+  --color-canvas: #f7f5f0;
+  --color-surface: #fffdf8;
+  --color-surface-strong: #ffffff;
+  --color-ink: #1d1c18;
+  --color-ink-muted: #68625a;
+  --color-line: #ded8cb;
+  --color-primary: #255f85;
+  --color-primary-strong: #18465f;
+  --color-accent: #bb5d3d;
+  --color-success: #2e7a55;
+  --color-warning: #a56b1f;
+  --color-danger: #b04343;
+
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+
+  --radius-sm: 0.375rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.5rem;
+
+  --shadow-soft: 0 1rem 3rem rgb(29 28 24 / 8%);
+  --shadow-card: 0 0.75rem 1.75rem rgb(29 28 24 / 7%);
+  --container: 1180px;
+}

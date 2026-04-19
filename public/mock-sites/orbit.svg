@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 540" role="img" aria-label="Orbit Hotel Refresh preview">
+  <rect width="720" height="540" fill="#e7f0ef"/>
+  <rect x="70" y="70" width="580" height="400" rx="26" fill="#fffdf8"/>
+  <rect x="112" y="112" width="212" height="26" rx="13" fill="#18465f"/>
+  <rect x="112" y="162" width="320" height="18" rx="9" fill="#7aa1ad"/>
+  <rect x="112" y="198" width="240" height="18" rx="9" fill="#7aa1ad"/>
+  <rect x="112" y="262" width="198" height="116" rx="18" fill="#bb5d3d"/>
+  <rect x="346" y="226" width="210" height="152" rx="18" fill="#255f85"/>
+  <circle cx="484" cy="186" r="74" fill="#e8c26e"/>
+</svg>

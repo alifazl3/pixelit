@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 540" role="img" aria-label="Atlas Retail Launch preview">
+  <rect width="720" height="540" fill="#f4eee4"/>
+  <rect x="54" y="54" width="612" height="432" rx="28" fill="#255f85"/>
+  <rect x="94" y="94" width="232" height="42" rx="21" fill="#fffdf8"/>
+  <rect x="94" y="162" width="282" height="20" rx="10" fill="#c9e4ee"/>
+  <rect x="94" y="202" width="212" height="20" rx="10" fill="#c9e4ee"/>
+  <rect x="94" y="276" width="178" height="64" rx="12" fill="#bb5d3d"/>
+  <circle cx="520" cy="260" r="126" fill="#fffdf8"/>
+  <circle cx="500" cy="240" r="58" fill="#bb5d3d"/>
+  <rect x="438" y="340" width="170" height="38" rx="19" fill="#18465f"/>
+</svg>

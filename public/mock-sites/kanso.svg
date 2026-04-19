@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 540" role="img" aria-label="Kanso Product Story preview">
+  <rect width="720" height="540" fill="#fffdf8"/>
+  <rect x="60" y="60" width="600" height="420" rx="30" fill="#1d1c18"/>
+  <rect x="104" y="104" width="130" height="28" rx="14" fill="#f7f5f0"/>
+  <rect x="104" y="168" width="246" height="18" rx="9" fill="#ded8cb"/>
+  <rect x="104" y="204" width="188" height="18" rx="9" fill="#ded8cb"/>
+  <rect x="104" y="348" width="184" height="58" rx="12" fill="#bb5d3d"/>
+  <rect x="410" y="120" width="150" height="280" rx="75" fill="#f7f5f0"/>
+  <rect x="454" y="162" width="62" height="196" rx="31" fill="#255f85"/>
+  <circle cx="520" cy="120" r="54" fill="#bb5d3d"/>
+</svg>
