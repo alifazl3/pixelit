@@ -44,11 +44,11 @@ main {
 
 .marburg-hero {
   position: relative;
-  min-height: 100vh;
+  min-height: max(100vh, 66.6667vw);
   padding: 0 clamp(1.5rem, 10vw, 14rem) 4.5rem;
   overflow: hidden;
   --spotlight-opacity: 0;
-  --spotlight-radius: clamp(9rem, 16vw, 17rem);
+  --spotlight-radius: clamp(11rem, 18vw, 20rem);
   --spotlight-x: 50%;
   --spotlight-y: 46%;
 }
@@ -57,21 +57,23 @@ main {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(90deg, rgb(4 7 13 / 86%) 0%, rgb(4 7 13 / 48%) 48%, rgb(4 7 13 / 86%) 100%),
-    linear-gradient(180deg, rgb(4 7 13 / 10%) 0%, #0b0e16 100%),
+    linear-gradient(90deg, rgb(4 7 13 / 62%) 0%, rgb(4 7 13 / 24%) 48%, rgb(4 7 13 / 70%) 100%),
+    linear-gradient(180deg, rgb(4 7 13 / 0%) 0%, rgb(11 14 22 / 62%) 100%),
     url("/marburg/hero-bg.png");
-  background-position: center;
-  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
   pointer-events: none;
 }
 
 .hero-image-layer--lit {
   background:
-    linear-gradient(90deg, rgb(4 7 13 / 42%) 0%, rgb(4 7 13 / 10%) 50%, rgb(4 7 13 / 40%) 100%),
-    linear-gradient(180deg, transparent 0%, rgb(11 14 22 / 58%) 100%),
+    linear-gradient(90deg, rgb(4 7 13 / 24%) 0%, rgb(4 7 13 / 0%) 50%, rgb(4 7 13 / 24%) 100%),
+    linear-gradient(180deg, transparent 0%, rgb(11 14 22 / 28%) 100%),
     url("/marburg/hero-lit.png");
-  background-position: center;
-  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
 }
 
 .hero-image-layer--dark {
@@ -102,7 +104,7 @@ main {
   background:
     radial-gradient(
       circle calc(var(--spotlight-radius) * 0.72) at var(--spotlight-x) var(--spotlight-y),
-      rgb(244 174 60 / calc(var(--spotlight-opacity) * 0.18)),
+      rgb(244 174 60 / calc(var(--spotlight-opacity) * 0.26)),
       transparent 74%
     );
 }
@@ -465,6 +467,12 @@ main {
   .marburg-hero {
     min-height: 48rem;
     padding: 0 1.25rem 3rem;
+  }
+
+  .hero-image-layer,
+  .hero-image-layer--lit {
+    background-position: top center;
+    background-size: auto 100%;
   }
 
   .site-nav {
