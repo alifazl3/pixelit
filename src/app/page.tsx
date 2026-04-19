@@ -1,3 +1,5 @@
+import { HeroLightReveal } from "@/features/marburg-landing/ui/HeroLightReveal";
+
 const services = [
   {
     title: "Web-Präsenz",
@@ -106,7 +108,7 @@ function ServiceIcon({ type }: { type: string }) {
 export default function Home() {
   return (
     <main>
-      <section className="marburg-hero">
+      <HeroLightReveal>
         <header className="site-nav" aria-label="Primary navigation">
           <a className="brand" href="#top" aria-label="Marburg Digital Service">
             <span>MDS</span>
@@ -142,7 +144,7 @@ export default function Home() {
             <a href="#onboarding">Onboarding starten</a>
           </div>
         </div>
-      </section>
+      </HeroLightReveal>
 
       <section className="services-section" id="services">
         <div className="section-copy">

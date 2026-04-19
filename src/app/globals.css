@@ -46,12 +46,72 @@ main {
   position: relative;
   min-height: 100vh;
   padding: 0 clamp(1.5rem, 10vw, 14rem) 4.5rem;
+  overflow: hidden;
+  --spotlight-opacity: 0;
+  --spotlight-radius: clamp(9rem, 16vw, 17rem);
+  --spotlight-x: 50%;
+  --spotlight-y: 46%;
+}
+
+.hero-image-layer {
+  position: absolute;
+  inset: 0;
   background:
     linear-gradient(90deg, rgb(4 7 13 / 86%) 0%, rgb(4 7 13 / 48%) 48%, rgb(4 7 13 / 86%) 100%),
     linear-gradient(180deg, rgb(4 7 13 / 10%) 0%, #0b0e16 100%),
     url("/marburg/hero-bg.png");
   background-position: center;
   background-size: cover;
+  pointer-events: none;
+}
+
+.hero-image-layer--lit {
+  background:
+    linear-gradient(90deg, rgb(4 7 13 / 42%) 0%, rgb(4 7 13 / 10%) 50%, rgb(4 7 13 / 40%) 100%),
+    linear-gradient(180deg, transparent 0%, rgb(11 14 22 / 58%) 100%),
+    url("/marburg/hero-lit.png");
+  background-position: center;
+  background-size: cover;
+}
+
+.hero-image-layer--dark {
+  opacity: 1;
+  -webkit-mask-image:
+    radial-gradient(
+      circle var(--spotlight-radius) at var(--spotlight-x) var(--spotlight-y),
+      rgb(0 0 0 / calc(1 - var(--spotlight-opacity))) 0%,
+      rgb(0 0 0 / calc(1 - var(--spotlight-opacity))) 28%,
+      #000 72%
+    );
+  mask-image:
+    radial-gradient(
+      circle var(--spotlight-radius) at var(--spotlight-x) var(--spotlight-y),
+      rgb(0 0 0 / calc(1 - var(--spotlight-opacity))) 0%,
+      rgb(0 0 0 / calc(1 - var(--spotlight-opacity))) 28%,
+      #000 72%
+    );
+  transition:
+    -webkit-mask-image 160ms ease,
+    mask-image 160ms ease;
+}
+
+.hero-image-layer--dark::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  background:
+    radial-gradient(
+      circle calc(var(--spotlight-radius) * 0.72) at var(--spotlight-x) var(--spotlight-y),
+      rgb(244 174 60 / calc(var(--spotlight-opacity) * 0.18)),
+      transparent 74%
+    );
+}
+
+.site-nav,
+.hero-copy,
+.hero-action-row {
+  position: relative;
+  z-index: 2;
 }
 
 .site-nav {
