@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Site Pix",
-  description: "A visual launch workspace powered by mocked services.",
+  title: "Marburg Digital Service",
+  description: "Marketing, websites, email, and digital operations for local businesses.",
 };
 
 export default function RootLayout({
