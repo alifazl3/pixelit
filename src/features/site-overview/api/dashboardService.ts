@@ -29,12 +29,12 @@ export async function getSiteOverview(): Promise<SiteOverview> {
       {
         label: "Live launches",
         value: formatNumber(liveCount),
-        detail: "Published demonstration data",
+        detail: "Published to client staging",
       },
       {
         label: "Readiness",
         value: formatPercent(averageScore),
-        detail: "Average across all mock projects",
+        detail: "Average across active launches",
       },
       {
         label: "Assets tracked",
