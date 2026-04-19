@@ -49,7 +49,7 @@ main {
   background:
     linear-gradient(90deg, rgb(4 7 13 / 86%) 0%, rgb(4 7 13 / 48%) 48%, rgb(4 7 13 / 86%) 100%),
     linear-gradient(180deg, rgb(4 7 13 / 10%) 0%, #0b0e16 100%),
-    url("/marburg/hero.jpg");
+    url("/marburg/hero-bg.png");
   background-position: center;
   background-size: cover;
 }
