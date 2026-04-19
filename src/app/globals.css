@@ -48,7 +48,7 @@ main {
   padding: 0 clamp(1.5rem, 10vw, 14rem) 4.5rem;
   overflow: hidden;
   --spotlight-opacity: 0;
-  --spotlight-radius: clamp(11rem, 18vw, 20rem);
+  --spotlight-radius: clamp(8.8rem, 14.4vw, 16rem);
   --spotlight-x: 50%;
   --spotlight-y: 46%;
 }
@@ -211,7 +211,7 @@ main {
 
 .hero-copy p {
   color: #dceadd;
-  font-size: clamp(2rem, 4vw, 4rem);
+  font-size: clamp(1.7rem, 3.4vw, 3.4rem);
   line-height: 1.05;
 }
 
