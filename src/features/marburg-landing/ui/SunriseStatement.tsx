@@ -2,11 +2,19 @@
 
 import { useEffect, useRef } from "react";
 
+type Locale = "de" | "en" | "fa";
+
+const statementCopy: Record<Locale, string> = {
+  de: "Nach oben kommt man nicht zufällig.",
+  en: "You do not climb by accident.",
+  fa: "بالا رفتن اتفاقی نیست.",
+};
+
 function clamp(value: number) {
   return Math.min(Math.max(value, 0), 1);
 }
 
-export function SunriseStatement() {
+export function SunriseStatement({ locale }: { locale: Locale }) {
   const sectionRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
@@ -48,7 +56,7 @@ export function SunriseStatement() {
         <div className="sunrise-layer sunrise-layer--night" aria-hidden="true" />
         <div className="sunrise-layer sunrise-layer--glow" aria-hidden="true" />
         <div className="sunrise-statement">
-          <h2>Nach oben kommt man nicht zufällig.</h2>
+          <h2>{statementCopy[locale]}</h2>
         </div>
       </div>
     </section>
