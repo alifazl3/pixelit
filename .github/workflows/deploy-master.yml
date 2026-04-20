@@ -111,14 +111,23 @@ jobs:
           systemctl restart "${SERVICE}"
 
           # Wait for service to become healthy after restart.
-          attempts=30
-          until systemctl is-active --quiet "${SERVICE}" && curl -fsS http://127.0.0.1:3100/ > /dev/null; do
-            attempts=$((attempts - 1))
-            if [ "${attempts}" -le 0 ]; then
-              echo "Service did not become healthy in time"
-              systemctl status "${SERVICE}" --no-pager -n 80 || true
+          # This avoids flakiness when Next.js needs a few extra seconds to bind the port.
+          tries=45
+          until systemctl is-active --quiet "${SERVICE}"; do
+            tries=$((tries - 1))
+            if [ "${tries}" -le 0 ]; then
+              echo "Service did not reach active state in time"
+              systemctl status "${SERVICE}" --no-pager -n 120 || true
+              journalctl -u "${SERVICE}" --no-pager -n 120 || true
               exit 1
             fi
             sleep 1
           done
+
+          curl --fail --silent --show-error \
+            --retry 45 \
+            --retry-delay 1 \
+            --retry-connrefused \
+            --retry-all-errors \
+            http://127.0.0.1:3100/ > /dev/null
           REMOTE
