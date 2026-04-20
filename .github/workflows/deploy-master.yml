@@ -109,6 +109,16 @@ jobs:
           corepack pnpm install --frozen-lockfile
           corepack pnpm build
           systemctl restart "${SERVICE}"
-          systemctl is-active --quiet "${SERVICE}"
-          curl -fsS http://127.0.0.1:3100/ > /dev/null
+
+          # Wait for service to become healthy after restart.
+          attempts=30
+          until systemctl is-active --quiet "${SERVICE}" && curl -fsS http://127.0.0.1:3100/ > /dev/null; do
+            attempts=$((attempts - 1))
+            if [ "${attempts}" -le 0 ]; then
+              echo "Service did not become healthy in time"
+              systemctl status "${SERVICE}" --no-pager -n 80 || true
+              exit 1
+            fi
+            sleep 1
+          done
           REMOTE
