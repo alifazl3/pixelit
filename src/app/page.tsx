@@ -1,4 +1,5 @@
 import { HeroLightReveal } from "@/features/marburg-landing/ui/HeroLightReveal";
+import { SunriseStatement } from "@/features/marburg-landing/ui/SunriseStatement";
 
 const services = [
   {
@@ -163,11 +164,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="image-statement" id="modules">
-        <div>
-          <h2>Nach oben kommt man nicht zufällig.</h2>
-        </div>
-      </section>
+      <SunriseStatement />
 
       <section className="catalog-section" id="packages">
         <div className="catalog-heading">
